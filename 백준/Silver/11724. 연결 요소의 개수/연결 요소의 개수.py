@@ -1,30 +1,26 @@
+import sys
+from collections import deque
 N, M = map(int, input().split())
 adjList = [[] for _ in range(N+1)]
-visited = [0 for _ in range(N+1)]
+visited = [0] * (N+1)
 for _ in range(M):
-    u, v = map(int, input().split())
-    # print(u, v)
+    u, v = map(int, sys.stdin.readline().strip().split())
     adjList[u].append(v)
     adjList[v].append(u)
 
-def dfs(v):
-    if visited[v] == 1:
-        return
-    if visited[v] == 0:
-        visited[v] = 1
-        for w in adjList[v]:
-            if visited[w] == 0:
-                dfs(w)
+def bfs(i):
+    q = deque([i])
+    while q:
+        x = q.popleft()
+        for nxt in adjList[x]:
+            if not visited[nxt]:
+                visited[nxt] = 1
+                q.append(nxt)
 
 cnt = 0
 for i in range(1, N+1):
-    if visited[i] == 0:
-        # 연결요소가 없는 경우 따로 세주기
-        if not adjList[i]:
-            pass
-        else:
-            dfs(i)
+    if not visited[i]:
         cnt += 1
-    else:
-        continue
+        visited[i] = 1
+        bfs(i)
 print(cnt)
