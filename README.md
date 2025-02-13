@@ -89,10 +89,28 @@
 - SELECT
 
 <details close>
+<summary><b>날짜 형식 변환</b></summary>
+<div markdown="1">
+
+- [LV4 / WHERE절 / 저자 별 카테고리 별 매출액 집계하기](./프로그래머스/4/144856. 저자 별 카테고리 별 매출액 집계하기/저자 별 카테고리 별 매출액 집계하기.sql)
+
+</div>
+</details>
+
+<details close>
 <summary><b>서브쿼리</b></summary>
 <div markdown="1">
 
 - [LV2 / WHERE절 / 업그레이드 된 아이템 구하기](./프로그래머스/2/273711. 업그레이드 된 아이템 구하기/업그레이드 된 아이템 구하기.sql)
+
+</div>
+</details>
+
+<details close>
+<summary><b>3중 JOIN문</b></summary>
+<div markdown="1">
+
+- [LV4 / FROM절 / 저자 별 카테고리 별 매출액 집계하기](./프로그래머스/4/144856. 저자 별 카테고리 별 매출액 집계하기/저자 별 카테고리 별 매출액 집계하기.sql)
 
 </div>
 </details>
