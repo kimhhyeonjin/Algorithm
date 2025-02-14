@@ -98,6 +98,15 @@
 </details>
 
 <details close>
+<summary><b>중복 제거 DISTINCT</b></summary>
+<div markdown="1">
+
+- [LV4 / SELECT절 / 년， 월， 성별 별 상품 구매 회원 수 구하기](./프로그래머스/4/131532. 년， 월， 성별 별 상품 구매 회원 수 구하기/년， 월， 성별 별 상품 구매 회원 수 구하기.sql)
+
+</div>
+</details>
+
+<details close>
 <summary><b>서브쿼리</b></summary>
 <div markdown="1">
 
