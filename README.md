@@ -113,8 +113,8 @@
 <div markdown="1">
 
 ```mysql
-CASE WHEN '조건1' THEN '조건1을 만족할 때 결과'
-     WHEN '조건2' THEN '조건2를 만족할 때 결과'
+CASE WHEN 조건1 THEN '조건1을 만족할 때 결과'
+     WHEN 조건2 THEN '조건2를 만족할 때 결과'
      ...
      ELSE '위 조건을 모두 만족하지 않을 때 결과'
 END
