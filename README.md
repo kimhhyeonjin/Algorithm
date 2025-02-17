@@ -109,6 +109,23 @@
 </details>
 
 <details close>
+<summary><b>조건문 CASE WHEN</b></summary>
+<div markdown="1">
+
+```mysql
+CASE WHEN '조건1' THEN '조건1을 만족할 때 결과'
+     WHEN '조건2' THEN '조건2를 만족할 때 결과'
+     ...
+     ELSE '위 조건을 모두 만족하지 않을 때 결과'
+END
+```
+
+- [LV3 / HAVING절 / 특정 조건을 만족하는 물고기별 수와 최대 길이 구하기](./프로그래머스/3/298519. 특정 조건을 만족하는 물고기별 수와 최대 길이 구하기/특정 조건을 만족하는 물고기별 수와 최대 길이 구하기.sql)
+
+</div>
+</details>
+
+<details close>
 <summary><b>서브쿼리</b></summary>
 <div markdown="1">
 
