@@ -89,6 +89,47 @@
 - SELECT
 
 <details close>
+<summary><b>함수</b></summary>
+<div markdown="1">
+
+- COUNT
+
+  - 집계함수로 한 번에 하나의 집계 값을 반환하므로 MAX와 같은 함수와 함께 사용할 수 없음
+
+    - [LV4 / HAVING절 / 그룹별 조건에 맞는 식당 목록 출력하기](./프로그래머스/4/131124. 그룹별 조건에 맞는 식당 목록 출력하기/그룹별 조건에 맞는 식당 목록 출력하기.sql)
+
+    - 그룹화 후 최대값을 구하는 경우는 가능
+
+- SUM
+
+- AVG
+
+- MAX
+
+- MIN
+
+- ROUND
+
+- TRUNC
+
+- CONCAT
+
+- UPPER
+
+- LOWER
+
+- SUBSTRING
+
+- NOW
+
+- CURDATE
+
+- DATEDIFF
+
+</div>
+</details>
+
+<details close>
 <summary><b>날짜 형식 변환</b></summary>
 <div markdown="1">
 
@@ -132,6 +173,8 @@ END
 - [LV2 / WHERE절 / 업그레이드 된 아이템 구하기](./프로그래머스/2/273711. 업그레이드 된 아이템 구하기/업그레이드 된 아이템 구하기.sql)
 
 - [LV3 / WHERE절 / 헤비 유저가 소유한 장소](./프로그래머스/3/77487. 헤비 유저가 소유한 장소/헤비 유저가 소유한 장소.sql)
+
+- [LV4 / WHERE절 / 그룹별 조건에 맞는 식당 목록 출력하기](./프로그래머스/4/131124. 그룹별 조건에 맞는 식당 목록 출력하기/그룹별 조건에 맞는 식당 목록 출력하기.sql)
 
 </div>
 </details>
