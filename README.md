@@ -158,6 +158,17 @@
 </details>
 
 <details close>
+<summary><b>BETWEEN A AND B</b></summary>
+<div markdown="1">
+
+- A값과 B값 모두 포함
+
+- [LV3 / WHERE절 / 대여 횟수가 많은 자동차들의 월별 대여 횟수 구하기](./프로그래머스/3/151139. 대여 횟수가 많은 자동차들의 월별 대여 횟수 구하기/대여 횟수가 많은 자동차들의 월별 대여 횟수 구하기.sql)
+
+</div>
+</details>
+
+<details close>
 <summary><b>중복 제거 DISTINCT</b></summary>
 <div markdown="1">
 
