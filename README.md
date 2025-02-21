@@ -169,6 +169,33 @@
 </details>
 
 <details close>
+<summary><b>LIKE</b></summary>
+<div markdown="1">
+
+- 특정 패턴을 열에서 검색하는 데 사용
+
+  ```mysql
+  SELECT 열 이름
+  FROM 테이블 이름
+  WHERE 열 이름 LIKE 패턴;
+  ```
+
+  - 와일드카드
+
+    - %
+
+      - 0개 이상의 문자와 일치
+
+    - \_
+
+      - 정확히 한 문자와 일치
+
+- [LV1 / WHERE절 / 강원도에 위치한 생산공장 목록 출력하기](./프로그래머스/1/131112. 강원도에 위치한 생산공장 목록 출력하기/강원도에 위치한 생산공장 목록 출력하기.sql)
+
+</div>
+</details>
+
+<details close>
 <summary><b>중복 제거 DISTINCT</b></summary>
 <div markdown="1">
 
