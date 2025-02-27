@@ -230,6 +230,17 @@ END
 </details>
 
 <details close>
+<summary><b>NULL</b></summary>
+<div markdown="1">
+
+- IS NULL
+
+  - [LV1 / WHERE절 / 이름이 없는 동물의 아이디](./프로그래머스/1/59039. 이름이 없는 동물의 아이디/이름이 없는 동물의 아이디.sql)
+
+</div>
+</details>
+
+<details close>
 <summary><b>서브쿼리</b></summary>
 <div markdown="1">
 
