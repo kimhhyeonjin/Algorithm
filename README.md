@@ -230,6 +230,8 @@ END
 
 - [LV3 / HAVING절 / 특정 조건을 만족하는 물고기별 수와 최대 길이 구하기](./프로그래머스/3/298519. 특정 조건을 만족하는 물고기별 수와 최대 길이 구하기/특정 조건을 만족하는 물고기별 수와 최대 길이 구하기.sql)
 
+- [LV2 / SELECT절 / NULL 처리하기](./프로그래머스/2/59410. NULL 처리하기/NULL 처리하기.sql)
+
 </div>
 </details>
 
@@ -244,6 +246,28 @@ END
 - IS NOT NULL
 
   - [LV2 / WHERE절 / 동명 동물 수 찾기](./프로그래머스/2/59041. 동명 동물 수 찾기/동명 동물 수 찾기.sql)
+
+- IFNULL
+
+  ```mysql
+  IFNULL(Column, "대체값")
+  ```
+
+  - Column이 NULL일 때 대체값으로 대체
+
+  - [LV2 / SELECT절 / NULL 처리하기](./프로그래머스/2/59410. NULL 처리하기/NULL 처리하기.sql)
+
+- COALESCE
+
+  - NULL이 아닌 첫번째 값
+
+    ```mysql
+    COALESCE(Column1, Column2, Column3, ...)
+    ```
+
+    - 전부 NULL값이라면 NULL 반환
+
+    - [LV2 / SELECT절 / NULL 처리하기](./프로그래머스/2/59410. NULL 처리하기/NULL 처리하기.sql)
 
 </div>
 </details>
