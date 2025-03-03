@@ -158,7 +158,11 @@
 <summary><b>날짜 형식 변환</b></summary>
 <div markdown="1">
 
-- [LV4 / WHERE절 / 저자 별 카테고리 별 매출액 집계하기](./프로그래머스/4/144856. 저자 별 카테고리 별 매출액 집계하기/저자 별 카테고리 별 매출액 집계하기.sql)
+- DATE_FORMAT
+
+  - [LV4 / WHERE절 / 저자 별 카테고리 별 매출액 집계하기](./프로그래머스/4/144856. 저자 별 카테고리 별 매출액 집계하기/저자 별 카테고리 별 매출액 집계하기.sql)
+
+  - [LV2 / SELECT절 / DATETIME에서 DATE로 형 변환](./프로그래머스/2/59414. DATETIME에서 DATE로 형 변환/DATETIME에서 DATE로 형 변환.sql)
 
 </div>
 </details>
