@@ -225,6 +225,19 @@
 </details>
 
 <details close>
+<summary><b>조건문 IF</b></summary>
+<div markdown="1">
+
+```mysql
+IF(조건, 조건을 만족할 때 결과, 조건을 만족하지 않을 때 결과)
+```
+
+- [LV2 / SELECT절 / 중성화 여부 파악하기](./프로그래머스/2/59409. 중성화 여부 파악하기/중성화 여부 파악하기.sql)
+
+</div>
+</details>
+
+<details close>
 <summary><b>조건문 CASE WHEN</b></summary>
 <div markdown="1">
 
@@ -241,6 +254,8 @@ END
 - [LV2 / SELECT절 / NULL 처리하기](./프로그래머스/2/59410. NULL 처리하기/NULL 처리하기.sql)
 
 - [LV1 / SELECT절 / 경기도에 위치한 식품창고 목록 출력하기](./프로그래머스/1/131114. 경기도에 위치한 식품창고 목록 출력하기/경기도에 위치한 식품창고 목록 출력하기.sql)
+
+- [LV2 / SELECT절 / 중성화 여부 파악하기](./프로그래머스/2/59409. 중성화 여부 파악하기/중성화 여부 파악하기.sql)
 
 </div>
 </details>
