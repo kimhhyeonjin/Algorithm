@@ -153,6 +153,16 @@
 
 - DATEDIFF
 
+  - 두 날짜 사이의 차이를 계산하는 함수
+
+    ```mysql
+    DATEDIFF(date1, date2)
+    -- (date1 - date2)
+    -- date1과 date2 사이의 차이를 일 단위로 반환
+    ```
+
+    - [LV3 / ORDER BY절 / 오랜 기간 보호한 동물（2）](./프로그래머스/3/59411. 오랜 기간 보호한 동물（2）/오랜 기간 보호한 동물（2）.sql)
+
 </div>
 </details>
 
