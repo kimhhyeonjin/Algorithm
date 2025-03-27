@@ -344,3 +344,75 @@ END
 
 </div>
 </details>
+
+<details close>
+<summary><b>집합</b></summary>
+<div markdown="1">
+
+- 합집합 (UNION)
+
+  - UNION
+
+    - 중복된 값을 제거하고 결과 반환
+
+      ```mysql
+      SELECT column_name FROM table1
+      UNION
+      SELECT column_name FROM table2;
+      ```
+
+  - UNION ALL
+
+    - 중복된 값도 포함하여 결과 반환
+
+      ```mysql
+      SELECT column_name FROM table1
+      UNION ALL
+      SELECT column_name FROM table2;
+      ```
+
+- 교집합 (INTERSECT)
+
+  - INNER JOIN
+
+    ```mysql
+    SELECT column_name FROM table1
+    INNER JOIN table2 ON table1.column_name = table2.column_name;
+    ```
+
+  - EXISTS
+
+    ```mysql
+    SELECT column_name
+    FROM table1 t1
+    WHERE EXISTS (SELECT 1 FROM table2 t2 WHERE t1.column_name = t2.column_name);
+    ```
+
+- 차집합 (DIFFERENCE 또는 EXCEPT)
+
+  - LEFT JOIN
+
+    ```mysql
+    SELECT column_name FROM table1
+    LEFT JOIN table2 ON table1.column_name = table2.column_name
+    WHERE table2.column_name IS NULL;
+    ```
+
+    - [LV3 / WHERE절 / 오랜 기간 보호한 동물（1）](./프로그래머스/3/59044. 오랜 기간 보호한 동물（1）/오랜 기간 보호한 동물（1）.sql)
+
+- 대칭차집합 (XOR)
+
+  - LEFT JOIN과 RIGHT JOIN 조합
+
+    ```mysql
+    SELECT column_name FROM table1
+    LEFT JOIN table2 ON table1.column_name = table2.column_name
+    WHERE table2.column_name IS NULL
+    UNION
+    SELECT column_name FROM table2
+    LEFT JOIN table1 ON table2.column_name = table1.column_name
+    WHERE table1.column_name IS NULL;
+    ```
+
+</div>
+</details>
