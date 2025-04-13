@@ -431,6 +431,8 @@ END
     INNER JOIN table2 ON table1.column_name = table2.column_name;
     ```
 
+    - [LV4 / FROM절 / 식품분류별 가장 비싼 식품의 정보 조회하기](./프로그래머스/4/131116. 식품분류별 가장 비싼 식품의 정보 조회하기/식품분류별 가장 비싼 식품의 정보 조회하기.sql)
+
   - EXISTS
 
     ```mysql
