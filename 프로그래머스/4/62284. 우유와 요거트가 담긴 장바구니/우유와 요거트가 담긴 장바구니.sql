@@ -1,8 +1,6 @@
--- 다음에 다시 풀어보기
 SELECT CART_ID
 FROM CART_PRODUCTS
 WHERE NAME IN ('Milk', 'Yogurt')
 GROUP BY CART_ID
-# NAME에 Milk와 Yogurt 2가지 모두 있는 경우 판별
 HAVING COUNT(DISTINCT NAME) = 2
 ORDER BY CART_ID
