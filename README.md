@@ -487,6 +487,8 @@ END
 
     - [LV4 / FROM절 / 주문량이 많은 아이스크림들 조회하기](./프로그래머스/4/133027. 주문량이 많은 아이스크림들 조회하기/주문량이 많은 아이스크림들 조회하기.sql)
 
+    - [LV4 / FROM절 / 입양 시각 구하기（2）](./프로그래머스/4/59413. 입양 시각 구하기（2）/입양 시각 구하기（2）.sql)
+
 - 대칭차집합 (XOR)
 
   - LEFT JOIN과 RIGHT JOIN 조합
@@ -500,6 +502,36 @@ END
     LEFT JOIN table1 ON table2.column_name = table1.column_name
     WHERE table1.column_name IS NULL;
     ```
+
+</div>
+</details>
+
+<details close>
+<summary><b>CTE(Common Table Expression)</b></summary>
+<div markdown="1">
+
+- 복잡한 쿼리를 더 읽기 쉽게 만들고 재사용할 수 있도록 해주는 기능
+
+  ```mysql
+  WITH cte_name AS (
+      -- CTE 정의: 서브쿼리나 SELECT문 등
+      SELECT column1, column2
+      FROM table_name
+      WHERE condition
+  )
+  -- CTE를 활용한 메인 쿼리
+  SELECT * FROM cte_name;
+  ```
+
+- WITH
+
+  - [LV3 / WITH / 대장균들의 자식의 수 구하기](./프로그래머스/3/299305. 대장균들의 자식의 수 구하기/대장균들의 자식의 수 구하기.sql)
+
+  - [LV4 / WITH / 연간 평가점수에 해당하는 평가 등급 및 성과금 조회하기](./프로그래머스/4/284528. 연간 평가점수에 해당하는 평가 등급 및 성과금 조회하기/연간 평가점수에 해당하는 평가 등급 및 성과금 조회하기.sql)
+
+- WITH RECURSIVE
+
+  - [LV4 / WITH RECURSIVE / 입양 시각 구하기（2）](./프로그래머스/4/59413. 입양 시각 구하기（2）/입양 시각 구하기（2）.sql)
 
 </div>
 </details>
