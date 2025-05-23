@@ -3,6 +3,56 @@
 ### 알고리즘
 
 <details close>
+<summary><b>파이썬</b></summary>
+<div markdown="1">
+
+- 함수
+
+  - map
+
+    - 반복 가능한(iterable) 객체에 대해서 특정 함수를 적용하고 그 결과를 새로운 반복 가능한 객체로 반환하는 함수
+
+    - map 객체 반환
+
+      ```python
+      map(function, iterable, ...)
+      # function: 각 요소에 적용할 함수로 하나의 인자를 받는 함수여야 함
+      # iterable: 함수가 적용될 반복 가능한 객체(리스트, 튜플, 문자열 등)
+      # ...: 여러 개의 반복 가능한 객체를 전달할 수도 있습니다. 이 경우, 함수는 각 반복 가능한 객체에서 해당 인덱스의 값을 모두 인자로 받습니다.
+
+      def add(x, y):
+          return x + y
+
+      numbers1 = [1, 2, 3]
+      numbers2 = [4, 5, 6]
+
+      result = map(add, numbers1, numbers2)
+
+      print(list(result))  # [5, 7, 9]
+      ```
+
+      - [LV1 / 정수 내림차순으로 배치하기](./프로그래머스/1/12933. 정수 내림차순으로 배치하기/정수 내림차순으로 배치하기.py)
+
+  - join
+
+    - 문자열의 리스트나 튜플을 하나의 문자열로 합치는 함수
+
+    - 문자열의 iterable 객체에서 사용해야 하므로, 숫자나 다른 데이터 타입을 문자열로 변환한 후에 사용
+
+      ```python
+      separator.join(iterable)
+
+      fruits = ["apple", "banana", "cherry"]
+      result = ", ".join(fruits)
+      print(result)  # 출력: apple, banana, cherry
+      ```
+
+      - [LV1 / 하샤드 수](./프로그래머스/1/12947. 하샤드 수/하샤드 수.py)
+
+</div>
+</details>
+
+<details close>
 <summary><b>그리디</b></summary>
 <div markdown="1">
 
