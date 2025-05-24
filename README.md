@@ -6,6 +6,19 @@
 <summary><b>파이썬</b></summary>
 <div markdown="1">
 
+- f 문자열 포매팅 (f-string)
+
+  - 문자열 앞에 f를 붙이고, 중괄호 {} 안에 변수를 넣어 사용
+
+    ```python
+    name = "홍길동"
+    age = 25
+    greeting = f"안녕하세요, 제 이름은 {name}이고, 나이는 {age}입니다."
+    print(greeting)
+    ```
+
+    - [LV1 / 서울에서 김서방 찾기](./프로그래머스/1/12919. 서울에서 김서방 찾기/서울에서 김서방 찾기.py)
+
 - 함수
 
   - map
