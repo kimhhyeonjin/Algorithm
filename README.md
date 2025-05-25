@@ -62,6 +62,46 @@
 
       - [LV1 / 하샤드 수](./프로그래머스/1/12947. 하샤드 수/하샤드 수.py)
 
+  - sorted
+
+    - 모든 iterable에 사용할 수 있는 함수로, 정렬된 새로운 리스트를 반환하며 원본 객체는 유지
+
+      ```python
+      new_list = sorted(list_name)
+      new_list = sorted(list_name, reverse = True)
+      new_list = sorted(list_name, key = lambda x : len(x), reverse = True)
+      new_list = sorted(list_name, key = lambda x : (len(x), x), reverse = True)
+      new_list = sorted(list_name, key = lambda x : (x[1], x[0]), reverse = True)
+      ```
+
+      - [LV1 / 문자열 내림차순으로 배치하기](./프로그래머스/1/12917. 문자열 내림차순으로 배치하기/문자열 내림차순으로 배치하기.py)
+
+- 리스트
+
+  - 함수
+
+    - sort
+
+      - 원본을 변경하여 정렬
+
+        ```python
+        list_name.sort()
+        list_name.sort(reverse = True)
+        list_name.sort(key = lambda x : len(x), reverse = True)
+        list_name.sort(key = lambda x : (len(x), x), reverse = True)
+        list_name.sort(key = lambda x : (x[1], x[0]), reverse = True)
+        ```
+
+    - remove
+
+      - 리스트에서 첫 번째로 나오는 값을 삭제하는 함수
+
+        ```python
+        a = [1, 2, 3, 1, 2, 3]
+        a.remove(3)
+        a   # [1, 2, 1, 2, 3]
+        ```
+
 </div>
 </details>
 
