@@ -6,19 +6,6 @@
 <summary><b>파이썬</b></summary>
 <div markdown="1">
 
-- f 문자열 포매팅 (f-string)
-
-  - 문자열 앞에 f를 붙이고, 중괄호 {} 안에 변수를 넣어 사용
-
-    ```python
-    name = "홍길동"
-    age = 25
-    greeting = f"안녕하세요, 제 이름은 {name}이고, 나이는 {age}입니다."
-    print(greeting)
-    ```
-
-    - [LV1 / 서울에서 김서방 찾기](./프로그래머스/1/12919. 서울에서 김서방 찾기/서울에서 김서방 찾기.py)
-
 - 함수
 
   - map
@@ -76,20 +63,6 @@
 
       - [LV1 / 문자열 내림차순으로 배치하기](./프로그래머스/1/12917. 문자열 내림차순으로 배치하기/문자열 내림차순으로 배치하기.py)
 
-  - isdecimal
-
-    - 문자열을 구성하는 각 원소가 0과 9사이의 정수(int)로 변환 가능한지 여부만을 판별
-
-    - 숫자로 보이더라도 정수화가 불가능하면 False 반환
-
-      ```python
-      num.isdecimal()
-      num.isdigit()
-      num.isnumeric()
-      ```
-
-      - [LV1 / 문자열 다루기 기본](./프로그래머스/1/12918. 문자열 다루기 기본/문자열 다루기 기본.py)
-
 - 리스트
 
   - 함수
@@ -114,6 +87,117 @@
         a = [1, 2, 3, 1, 2, 3]
         a.remove(3)
         a   # [1, 2, 1, 2, 3]
+        ```
+
+    - count
+
+      - 문자열이나 리스트 등에서 특정 요소의 개수를 세는 데 사용되는 함수
+
+        ```python
+        list_a = [1, 2, 5, 3, 6, 5, 1, 3, 1]
+        cnt_a = list_a.count(1)
+        print(cnt_a)    # 3
+        ```
+
+        - [LV2 / 이진 변환 반복하기](./프로그래머스/2/70129. 이진 변환 반복하기/이진 변환 반복하기.py)
+
+- 숫자형
+
+  - isdecimal
+
+    - 문자열을 구성하는 각 원소가 0과 9사이의 정수(int)로 변환 가능한지 여부만을 판별
+
+    - 숫자로 보이더라도 정수화가 불가능하면 False 반환
+
+      ```python
+      num.isdecimal()
+      num.isdigit()
+      num.isnumeric()
+      ```
+
+      - [LV1 / 문자열 다루기 기본](./프로그래머스/1/12918. 문자열 다루기 기본/문자열 다루기 기본.py)
+
+  - 진수 변환
+
+    - 10진수에서 2진수, 8진수, 16진수
+
+      ```python
+      bin(87)     # 0b1010111
+      oct(87)     # 0o127
+      hex(87)     # 0x57
+      ```
+
+      - [LV2 / 이진 변환 반복하기](./프로그래머스/2/70129. 이진 변환 반복하기/이진 변환 반복하기.py)
+
+    - 2진수, 8진수, 16진수에서 10진수
+
+      ```python
+      int('0b1010111', 2)   # 87
+      int('0o127', 8)       # 87
+      int('0x57', 16)       # 87
+      ```
+
+- 문자열 자료형
+
+  - f 문자열 포매팅 (f-string)
+
+    - 문자열 앞에 f를 붙이고, 중괄호 {} 안에 변수를 넣어 사용
+
+      ```python
+      name = "홍길동"
+      age = 25
+      greeting = f"안녕하세요, 제 이름은 {name}이고, 나이는 {age}입니다."
+      print(greeting)
+      ```
+
+      - [LV1 / 서울에서 김서방 찾기](./프로그래머스/1/12919. 서울에서 김서방 찾기/서울에서 김서방 찾기.py)
+
+  - 함수
+
+    - upper
+
+      - 대문자로 변환
+
+        ```python
+        a = 'hi'
+        new_a = a.upper()
+        print(new_a)    # 'HI'
+        ```
+
+        - [LV2 / JadenCase 문자열 만들기](./프로그래머스/2/12951. JadenCase 문자열 만들기/JadenCase 문자열 만들기.py)
+
+    - lower
+
+      - 소문자로 변환
+
+        ```python
+        a = 'HI'
+        new_a = a.lower()
+        print(new_a)    # 'hi'
+        ```
+
+        - [LV2 / JadenCase 문자열 만들기](./프로그래머스/2/12951. JadenCase 문자열 만들기/JadenCase 문자열 만들기.py)
+
+    - isalpha
+
+      - 문자열이 알파벳으로 구성되어 있는지 확인
+
+      - 숫자나 공백이 포함되면 False 반환
+
+        ```python
+        print('ABC'.isalpha())        # True
+        print('도레미'.isalpha())     # True
+        print('A B C'.isalpha())      # False
+        print('도레미123'.isalpha())  # False
+        ```
+
+    - isdigit
+
+      - 문자열이 숫자로만 구성되어 있는지 확인
+
+        ```python
+        print('135'.isdigit())      # True
+        print('1 3 5'.isdigit())    # False
         ```
 
 </div>
@@ -177,13 +261,6 @@
 
 <details close>
 <summary><b>그래프 이론</b></summary>
-<div markdown="1">
-
-</div>
-</details>
-
-<details close>
-<summary><b>문자열</b></summary>
 <div markdown="1">
 
 </div>
