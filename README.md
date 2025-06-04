@@ -213,6 +213,16 @@
         print('1 3 5'.isdigit())    # False
         ```
 
+- 라이브러리
+
+  - defaultdict
+
+    ```python
+    from collections import defaultdict
+    ```
+
+    - [LV2 / 할인 행사](./프로그래머스/2/131127. 할인 행사/할인 행사.py)
+
 </div>
 </details>
 
