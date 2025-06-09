@@ -227,6 +227,15 @@
 </details>
 
 <details close>
+<summary><b>완전탐색</b></summary>
+<div markdown="1">
+
+- [LV1 / 기사단원의 무기](./프로그래머스/1/136798. 기사단원의 무기/기사단원의 무기.py)
+
+</div>
+</details>
+
+<details close>
 <summary><b>그리디</b></summary>
 <div markdown="1">
 
