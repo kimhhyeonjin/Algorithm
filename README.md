@@ -219,9 +219,22 @@
 
     ```python
     from collections import defaultdict
+    a = defaultdict(int)
     ```
 
     - [LV2 / 할인 행사](./프로그래머스/2/131127. 할인 행사/할인 행사.py)
+
+  - combinations / permutations
+
+    ```python
+    from itertools import combinations
+    from itertools import permutations
+
+    c = list(combinations(iterable, r))
+    p = list(permutations(iterable, r))
+    ```
+
+    - [LV2 / 피로도](./프로그래머스/2/87946. 피로도/피로도.py)
 
 </div>
 </details>
@@ -231,6 +244,8 @@
 <div markdown="1">
 
 - [LV1 / 기사단원의 무기](./프로그래머스/1/136798. 기사단원의 무기/기사단원의 무기.py)
+
+- [LV1 / 모의고사](./프로그래머스/1/42840. 모의고사/모의고사.py)
 
 </div>
 </details>
