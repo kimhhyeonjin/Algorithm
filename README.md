@@ -213,6 +213,20 @@
         print('1 3 5'.isdigit())    # False
         ```
 
+    - replace
+
+      - 문자열에서 특정 문자열을 다른 문자열로 교체
+
+        ```python
+        string.replace(old_value, new_value, count)       # count는 횟수 설정
+
+        string = "Hello, world! world!!"
+        new_string = string.replace("world", "Python")    # "Hello, Python! Python!!"
+        new_string = string.replace("world", "Python", 1)    # "Hello, Python! world!!"
+        ```
+
+        - [LV1 / 숫자 문자열과 영단어](./프로그래머스/1/81301. 숫자 문자열과 영단어/숫자 문자열과 영단어.py)
+
 - 라이브러리
 
   - defaultdict
