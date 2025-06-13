@@ -293,6 +293,15 @@
 </details>
 
 <details close>
+<summary><b>투포인터</b></summary>
+<div markdown="1">
+
+- [LV2 / 구명보트](./프로그래머스/2/42885. 구명보트/구명보트.py)
+
+</div>
+</details>
+
+<details close>
 <summary><b>정렬</b></summary>
 <div markdown="1">
 
