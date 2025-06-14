@@ -33,6 +33,8 @@
 
       - [LV1 / 하샤드 수](./프로그래머스/1/12947. 하샤드 수/하샤드 수.py)
 
+      - [LV2 / 튜플](./프로그래머스/2/64065. 튜플/튜플.py)
+
   - join
 
     - 문자열의 리스트나 튜플을 하나의 문자열로 합치는 함수
@@ -80,6 +82,8 @@
         list_name.sort(key = lambda x : (len(x), x), reverse = True)
         list_name.sort(key = lambda x : (x[1], x[0]), reverse = True)
         ```
+
+        - [LV2 / 튜플](./프로그래머스/2/64065. 튜플/튜플.py)
 
     - remove
 
