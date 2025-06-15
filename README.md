@@ -111,6 +111,19 @@
 
       - 문자열, 리스트 등에서 문자열을 반대로 뒤집는 함수
 
+- 딕셔너리
+
+  - 원소 삭제하기
+
+    ```python
+    del dict_name['key_name']
+    dict_name.pop('key_name')   # value 값 반환
+    value = dict_name.pop('key_name')
+    print(value)
+    ```
+
+    - [LV2 / 롤케이크 자르기](./프로그래머스/2/132265. 롤케이크 자르기/롤케이크 자르기.py)
+
 - 숫자형
 
   - isdecimal
