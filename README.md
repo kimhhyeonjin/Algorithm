@@ -246,6 +246,17 @@
 
 - 라이브러리
 
+  - deque
+
+    ```python
+    from collections import deque
+    d = deque()
+    d.append([0, 0])
+    i, j = d.popleft()
+    ```
+
+    - [LV2 / 게임 맵 최단거리](./프로그래머스/2/1844. 게임 맵 최단거리/게임 맵 최단거리.py)
+
   - defaultdict
 
     ```python
@@ -305,6 +316,8 @@
 <details close>
 <summary><b>BFS</b></summary>
 <div markdown="1">
+
+- [LV2 / 게임 맵 최단거리](./프로그래머스/2/1844. 게임 맵 최단거리/게임 맵 최단거리.py)
 
 </div>
 </details>
