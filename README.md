@@ -244,6 +244,26 @@
 
         - [LV1 / 숫자 문자열과 영단어](./프로그래머스/1/81301. 숫자 문자열과 영단어/숫자 문자열과 영단어.py)
 
+        - [LV1 / 옹알이 （2）](./프로그래머스/1/133499. 옹알이 （2）/옹알이 （2）.py)
+
+    - strip
+
+      - 문자열 끝에서 특정 문자 제거
+
+        ```python
+        text.strip()            # 양쪽 공백 제거
+        text.lstrip()           # 왼쪽 공백 제거
+        text.tstrip()           # 오른쪽 공백 제거
+        text.strip('x')         # 특정 문자 제거
+        text.strip('xy')        # 여러 문자를 한 번에 제거 ('x', 'y'가 앞과 뒤에서 모두 제거)
+
+        text = "xyxxyHello, World!yyx"
+        stripped_text = text.strip('xy')
+        print(stripped_text)  # 'Hello, World!'
+        ```
+
+        - [LV1 / 옹알이 （2）](./프로그래머스/1/133499. 옹알이 （2）/옹알이 （2）.py)
+
 - 라이브러리
 
   - deque
