@@ -369,6 +369,8 @@
 <summary><b>다이나믹 프로그래밍</b></summary>
 <div markdown="1">
 
+- [LV3 / 정수 삼각형](./프로그래머스/3/43105. 정수 삼각형/정수 삼각형.py)
+
 </div>
 </details>
 
