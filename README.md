@@ -264,6 +264,17 @@
 
         - [LV1 / 옹알이 （2）](./프로그래머스/1/133499. 옹알이 （2）/옹알이 （2）.py)
 
+    - startswith / endswith
+
+      - 특정 단어로 시작하거나 끝나는지 확인
+
+        ```python
+        text.startswith('chk')    # text가 'chk'로 시작하는지 확인
+        text.endswith('chk')      # text가 'chk'로 끝나는지 확인
+        ```
+
+        - [LV2 / 전화번호 목록](./프로그래머스/2/42577. 전화번호 목록/전화번호 목록.py)
+
 - 라이브러리
 
   - deque
