@@ -111,6 +111,20 @@
 
       - 문자열, 리스트 등에서 문자열을 반대로 뒤집는 함수
 
+    - enumerate
+
+      - 순서가 있는 자료형(list, set, tuple, dictionary, string)을 입력으로 받았을 때, 인덱스와 값을 포함하여 반환하는 함수
+
+        ```python
+        for idx, num in enumerate(numbers):               # idx가 0부터 시작
+            print(idx, num)
+
+        for idx, num in enumerate(numbers, start = 1):    # idx가 1부터 시작
+            print(idx, num)
+        ```
+
+        - [LV2 / 뒤에 있는 큰 수 찾기](./프로그래머스/2/154539. 뒤에 있는 큰 수 찾기/뒤에 있는 큰 수 찾기.py)
+
 - 딕셔너리
 
   - 원소 삭제하기
@@ -346,6 +360,15 @@
 </details>
 
 <details close>
+<summary><b>스택</b></summary>
+<div markdown="1">
+
+- [LV2 / 뒤에 있는 큰 수 찾기](./프로그래머스/2/154539. 뒤에 있는 큰 수 찾기/뒤에 있는 큰 수 찾기.py)
+
+</div>
+</details>
+<details close>
+
 <summary><b>DFS</b></summary>
 <div markdown="1">
 
