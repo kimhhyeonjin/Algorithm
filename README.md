@@ -1,330 +1,369 @@
 # Algorithm
 
-### 알고리즘
+### 파이썬
 
 <details close>
-<summary><b>파이썬</b></summary>
+<summary><b>함수</b></summary>
+<div markdown="1">
+
+- map
+
+  - 반복 가능한(iterable) 객체에 대해서 특정 함수를 적용하고 그 결과를 새로운 반복 가능한 객체로 반환하는 함수
+
+  - map 객체 반환
+
+    ```python
+    map(function, iterable, ...)
+    # function: 각 요소에 적용할 함수로 하나의 인자를 받는 함수여야 함
+    # iterable: 함수가 적용될 반복 가능한 객체(리스트, 튜플, 문자열 등)
+    # ...: 여러 개의 반복 가능한 객체를 전달할 수도 있습니다. 이 경우, 함수는 각 반복 가능한 객체에서 해당 인덱스의 값을 모두 인자로 받습니다.
+
+    def add(x, y):
+        return x + y
+
+    numbers1 = [1, 2, 3]
+    numbers2 = [4, 5, 6]
+
+    result = map(add, numbers1, numbers2)
+
+    print(list(result))  # [5, 7, 9]
+    ```
+
+    - [LV1 / 하샤드 수](./프로그래머스/1/12947. 하샤드 수/하샤드 수.py)
+
+    - [LV2 / 튜플](./프로그래머스/2/64065. 튜플/튜플.py)
+
+- join
+
+  - 문자열의 리스트나 튜플을 하나의 문자열로 합치는 함수
+
+  - 문자열의 iterable 객체에서 사용해야 하므로, 숫자나 다른 데이터 타입을 문자열로 변환한 후에 사용
+
+    ```python
+    separator.join(iterable)
+
+    fruits = ["apple", "banana", "cherry"]
+    result = ", ".join(fruits)
+    print(result)  # 출력: apple, banana, cherry
+    ```
+
+    - [LV1 / 정수 내림차순으로 배치하기](./프로그래머스/1/12933. 정수 내림차순으로 배치하기/정수 내림차순으로 배치하기.py)
+
+- sorted
+
+  - 모든 iterable에 사용할 수 있는 함수로, 정렬된 새로운 리스트를 반환하며 원본 객체는 유지
+
+    ```python
+    new_list = sorted(list_name)
+    new_list = sorted(list_name, reverse = True)
+    new_list = sorted(list_name, key = lambda x : len(x), reverse = True)
+    new_list = sorted(list_name, key = lambda x : (len(x), x), reverse = True)
+    new_list = sorted(list_name, key = lambda x : (x[1], x[0]), reverse = True)
+    ```
+
+    - [LV1 / 문자열 내림차순으로 배치하기](./프로그래머스/1/12917. 문자열 내림차순으로 배치하기/문자열 내림차순으로 배치하기.py)
+
+    - [LV1 / 문자열 내 마음대로 정렬하기](./프로그래머스/1/12915. 문자열 내 마음대로 정렬하기/문자열 내 마음대로 정렬하기.py)
+
+</div>
+</details>
+
+<details close>
+<summary><b>리스트</b></summary>
 <div markdown="1">
 
 - 함수
 
-  - map
+  - sort
 
-    - 반복 가능한(iterable) 객체에 대해서 특정 함수를 적용하고 그 결과를 새로운 반복 가능한 객체로 반환하는 함수
-
-    - map 객체 반환
+    - 원본을 변경하여 정렬
 
       ```python
-      map(function, iterable, ...)
-      # function: 각 요소에 적용할 함수로 하나의 인자를 받는 함수여야 함
-      # iterable: 함수가 적용될 반복 가능한 객체(리스트, 튜플, 문자열 등)
-      # ...: 여러 개의 반복 가능한 객체를 전달할 수도 있습니다. 이 경우, 함수는 각 반복 가능한 객체에서 해당 인덱스의 값을 모두 인자로 받습니다.
-
-      def add(x, y):
-          return x + y
-
-      numbers1 = [1, 2, 3]
-      numbers2 = [4, 5, 6]
-
-      result = map(add, numbers1, numbers2)
-
-      print(list(result))  # [5, 7, 9]
+      list_name.sort()
+      list_name.sort(reverse = True)
+      list_name.sort(key = lambda x : len(x), reverse = True)
+      list_name.sort(key = lambda x : (len(x), x), reverse = True)
+      list_name.sort(key = lambda x : (x[1], x[0]), reverse = True)
       ```
-
-      - [LV1 / 하샤드 수](./프로그래머스/1/12947. 하샤드 수/하샤드 수.py)
 
       - [LV2 / 튜플](./프로그래머스/2/64065. 튜플/튜플.py)
 
-  - join
+  - remove
 
-    - 문자열의 리스트나 튜플을 하나의 문자열로 합치는 함수
-
-    - 문자열의 iterable 객체에서 사용해야 하므로, 숫자나 다른 데이터 타입을 문자열로 변환한 후에 사용
+    - 리스트에서 첫 번째로 나오는 값을 삭제하는 함수
 
       ```python
-      separator.join(iterable)
-
-      fruits = ["apple", "banana", "cherry"]
-      result = ", ".join(fruits)
-      print(result)  # 출력: apple, banana, cherry
+      a = [1, 2, 3, 1, 2, 3]
+      a.remove(3)
+      a   # [1, 2, 1, 2, 3]
       ```
 
-      - [LV1 / 정수 내림차순으로 배치하기](./프로그래머스/1/12933. 정수 내림차순으로 배치하기/정수 내림차순으로 배치하기.py)
+  - count
 
-  - sorted
-
-    - 모든 iterable에 사용할 수 있는 함수로, 정렬된 새로운 리스트를 반환하며 원본 객체는 유지
+    - 문자열이나 리스트 등에서 특정 요소의 개수를 세는 데 사용되는 함수
 
       ```python
-      new_list = sorted(list_name)
-      new_list = sorted(list_name, reverse = True)
-      new_list = sorted(list_name, key = lambda x : len(x), reverse = True)
-      new_list = sorted(list_name, key = lambda x : (len(x), x), reverse = True)
-      new_list = sorted(list_name, key = lambda x : (x[1], x[0]), reverse = True)
-      ```
-
-      - [LV1 / 문자열 내림차순으로 배치하기](./프로그래머스/1/12917. 문자열 내림차순으로 배치하기/문자열 내림차순으로 배치하기.py)
-
-      - [LV1 / 문자열 내 마음대로 정렬하기](./프로그래머스/1/12915. 문자열 내 마음대로 정렬하기/문자열 내 마음대로 정렬하기.py)
-
-- 리스트
-
-  - 함수
-
-    - sort
-
-      - 원본을 변경하여 정렬
-
-        ```python
-        list_name.sort()
-        list_name.sort(reverse = True)
-        list_name.sort(key = lambda x : len(x), reverse = True)
-        list_name.sort(key = lambda x : (len(x), x), reverse = True)
-        list_name.sort(key = lambda x : (x[1], x[0]), reverse = True)
-        ```
-
-        - [LV2 / 튜플](./프로그래머스/2/64065. 튜플/튜플.py)
-
-    - remove
-
-      - 리스트에서 첫 번째로 나오는 값을 삭제하는 함수
-
-        ```python
-        a = [1, 2, 3, 1, 2, 3]
-        a.remove(3)
-        a   # [1, 2, 1, 2, 3]
-        ```
-
-    - count
-
-      - 문자열이나 리스트 등에서 특정 요소의 개수를 세는 데 사용되는 함수
-
-        ```python
-        list_a = [1, 2, 5, 3, 6, 5, 1, 3, 1]
-        cnt_a = list_a.count(1)
-        print(cnt_a)    # 3
-        ```
-
-        - [LV2 / 이진 변환 반복하기](./프로그래머스/2/70129. 이진 변환 반복하기/이진 변환 반복하기.py)
-
-    - [::-1]
-
-      - 문자열, 리스트 등에서 문자열을 반대로 뒤집는 함수
-
-    - enumerate
-
-      - 순서가 있는 자료형(list, set, tuple, dictionary, string)을 입력으로 받았을 때, 인덱스와 값을 포함하여 반환하는 함수
-
-        ```python
-        for idx, num in enumerate(numbers):               # idx가 0부터 시작
-            print(idx, num)
-
-        for idx, num in enumerate(numbers, start = 1):    # idx가 1부터 시작
-            print(idx, num)
-        ```
-
-        - [LV2 / 뒤에 있는 큰 수 찾기](./프로그래머스/2/154539. 뒤에 있는 큰 수 찾기/뒤에 있는 큰 수 찾기.py)
-
-- 딕셔너리
-
-  - 원소 삭제하기
-
-    ```python
-    del dict_name['key_name']
-    dict_name.pop('key_name')   # value 값 반환
-    value = dict_name.pop('key_name')
-    print(value)
-    ```
-
-    - [LV2 / 롤케이크 자르기](./프로그래머스/2/132265. 롤케이크 자르기/롤케이크 자르기.py)
-
-- 숫자형
-
-  - isdecimal
-
-    - 문자열을 구성하는 각 원소가 0과 9사이의 정수(int)로 변환 가능한지 여부만을 판별
-
-    - 숫자로 보이더라도 정수화가 불가능하면 False 반환
-
-      ```python
-      num.isdecimal()
-      num.isdigit()
-      num.isnumeric()
-      ```
-
-      - [LV1 / 문자열 다루기 기본](./프로그래머스/1/12918. 문자열 다루기 기본/문자열 다루기 기본.py)
-
-  - 진수 변환
-
-    - 10진수에서 2진수, 8진수, 16진수
-
-      ```python
-      bin(87)     # 0b1010111
-      oct(87)     # 0o127
-      hex(87)     # 0x57
+      list_a = [1, 2, 5, 3, 6, 5, 1, 3, 1]
+      cnt_a = list_a.count(1)
+      print(cnt_a)    # 3
       ```
 
       - [LV2 / 이진 변환 반복하기](./프로그래머스/2/70129. 이진 변환 반복하기/이진 변환 반복하기.py)
 
-    - 2진수, 8진수, 16진수에서 10진수
+  - [::-1]
+
+    - 문자열, 리스트 등에서 문자열을 반대로 뒤집는 함수
+
+  - enumerate
+
+    - 순서가 있는 자료형(list, set, tuple, dictionary, string)을 입력으로 받았을 때, 인덱스와 값을 포함하여 반환하는 함수
 
       ```python
-      int('0b1010111', 2)   # 87
-      int('0o127', 8)       # 87
-      int('0x57', 16)       # 87
+      for idx, num in enumerate(numbers):               # idx가 0부터 시작
+          print(idx, num)
+
+      for idx, num in enumerate(numbers, start = 1):    # idx가 1부터 시작
+          print(idx, num)
       ```
 
-    - n진수에서 10진수
-
-      ```python
-      int('n진수 문자열', n)
-      int('101', 3)         # 10
-      ```
-
-- 문자열 자료형
-
-  - f 문자열 포매팅 (f-string)
-
-    - 문자열 앞에 f를 붙이고, 중괄호 {} 안에 변수를 넣어 사용
-
-      ```python
-      name = "홍길동"
-      age = 25
-      greeting = f"안녕하세요, 제 이름은 {name}이고, 나이는 {age}입니다."
-      print(greeting)
-      ```
-
-      - [LV1 / 서울에서 김서방 찾기](./프로그래머스/1/12919. 서울에서 김서방 찾기/서울에서 김서방 찾기.py)
-
-  - 함수
-
-    - upper
-
-      - 대문자로 변환
-
-        ```python
-        a = 'hi'
-        new_a = a.upper()
-        print(new_a)    # 'HI'
-        ```
-
-        - [LV2 / JadenCase 문자열 만들기](./프로그래머스/2/12951. JadenCase 문자열 만들기/JadenCase 문자열 만들기.py)
-
-    - lower
-
-      - 소문자로 변환
-
-        ```python
-        a = 'HI'
-        new_a = a.lower()
-        print(new_a)    # 'hi'
-        ```
-
-        - [LV2 / JadenCase 문자열 만들기](./프로그래머스/2/12951. JadenCase 문자열 만들기/JadenCase 문자열 만들기.py)
-
-    - isalpha
-
-      - 문자열이 알파벳으로 구성되어 있는지 확인
-
-      - 숫자나 공백이 포함되면 False 반환
-
-        ```python
-        print('ABC'.isalpha())        # True
-        print('도레미'.isalpha())     # True
-        print('A B C'.isalpha())      # False
-        print('도레미123'.isalpha())  # False
-        ```
-
-    - isdigit
-
-      - 문자열이 숫자로만 구성되어 있는지 확인
-
-        ```python
-        print('135'.isdigit())      # True
-        print('1 3 5'.isdigit())    # False
-        ```
-
-    - replace
-
-      - 문자열에서 특정 문자열을 다른 문자열로 교체
-
-        ```python
-        string.replace(old_value, new_value, count)       # count는 횟수 설정
-
-        string = "Hello, world! world!!"
-        new_string = string.replace("world", "Python")    # "Hello, Python! Python!!"
-        new_string = string.replace("world", "Python", 1)    # "Hello, Python! world!!"
-        ```
-
-        - [LV1 / 숫자 문자열과 영단어](./프로그래머스/1/81301. 숫자 문자열과 영단어/숫자 문자열과 영단어.py)
-
-        - [LV1 / 옹알이 （2）](./프로그래머스/1/133499. 옹알이 （2）/옹알이 （2）.py)
-
-    - strip
-
-      - 문자열 끝에서 특정 문자 제거
-
-        ```python
-        text.strip()            # 양쪽 공백 제거
-        text.lstrip()           # 왼쪽 공백 제거
-        text.tstrip()           # 오른쪽 공백 제거
-        text.strip('x')         # 특정 문자 제거
-        text.strip('xy')        # 여러 문자를 한 번에 제거 ('x', 'y'가 앞과 뒤에서 모두 제거)
-
-        text = "xyxxyHello, World!yyx"
-        stripped_text = text.strip('xy')
-        print(stripped_text)  # 'Hello, World!'
-        ```
-
-        - [LV1 / 옹알이 （2）](./프로그래머스/1/133499. 옹알이 （2）/옹알이 （2）.py)
-
-    - startswith / endswith
-
-      - 특정 단어로 시작하거나 끝나는지 확인
-
-        ```python
-        text.startswith('chk')    # text가 'chk'로 시작하는지 확인
-        text.endswith('chk')      # text가 'chk'로 끝나는지 확인
-        ```
-
-        - [LV2 / 전화번호 목록](./프로그래머스/2/42577. 전화번호 목록/전화번호 목록.py)
-
-- 라이브러리
-
-  - deque
-
-    ```python
-    from collections import deque
-    d = deque()
-    d.append([0, 0])
-    i, j = d.popleft()
-    ```
-
-    - [LV2 / 게임 맵 최단거리](./프로그래머스/2/1844. 게임 맵 최단거리/게임 맵 최단거리.py)
-
-  - defaultdict
-
-    ```python
-    from collections import defaultdict
-    a = defaultdict(int)
-    ```
-
-    - [LV2 / 할인 행사](./프로그래머스/2/131127. 할인 행사/할인 행사.py)
-
-  - combinations / permutations
-
-    ```python
-    from itertools import combinations
-    from itertools import permutations
-
-    c = list(combinations(iterable, r))
-    p = list(permutations(iterable, r))
-    ```
-
-    - [LV2 / 피로도](./프로그래머스/2/87946. 피로도/피로도.py)
+      - [LV2 / 뒤에 있는 큰 수 찾기](./프로그래머스/2/154539. 뒤에 있는 큰 수 찾기/뒤에 있는 큰 수 찾기.py)
 
 </div>
 </details>
+
+<details close>
+<summary><b>딕셔너리</b></summary>
+<div markdown="1">
+
+- 원소 삭제하기
+
+  ```python
+  del dict_name['key_name']
+  dict_name.pop('key_name')   # value 값 반환
+  value = dict_name.pop('key_name')
+  print(value)
+  ```
+
+  - [LV2 / 롤케이크 자르기](./프로그래머스/2/132265. 롤케이크 자르기/롤케이크 자르기.py)
+
+</div>
+</details>
+
+<details close>
+<summary><b>숫자형</b></summary>
+<div markdown="1">
+
+- isdecimal
+
+  - 문자열을 구성하는 각 원소가 0과 9사이의 정수(int)로 변환 가능한지 여부만을 판별
+
+  - 숫자로 보이더라도 정수화가 불가능하면 False 반환
+
+    ```python
+    num.isdecimal()
+    num.isdigit()
+    num.isnumeric()
+    ```
+
+    - [LV1 / 문자열 다루기 기본](./프로그래머스/1/12918. 문자열 다루기 기본/문자열 다루기 기본.py)
+
+- 진수 변환
+
+  - 10진수에서 2진수, 8진수, 16진수
+
+    ```python
+    bin(87)     # 0b1010111
+    oct(87)     # 0o127
+    hex(87)     # 0x57
+    ```
+
+    - [LV2 / 이진 변환 반복하기](./프로그래머스/2/70129. 이진 변환 반복하기/이진 변환 반복하기.py)
+
+  - 2진수, 8진수, 16진수에서 10진수
+
+    ```python
+    int('0b1010111', 2)   # 87
+    int('0o127', 8)       # 87
+    int('0x57', 16)       # 87
+    ```
+
+  - n진수에서 10진수
+
+    ```python
+    int('n진수 문자열', n)
+    int('101', 3)         # 10
+    ```
+
+</div>
+</details>
+
+<details close>
+<summary><b>문자열 자료형</b></summary>
+<div markdown="1">
+
+- f 문자열 포매팅 (f-string)
+
+  - 문자열 앞에 f를 붙이고, 중괄호 {} 안에 변수를 넣어 사용
+
+    ```python
+    name = "홍길동"
+    age = 25
+    greeting = f"안녕하세요, 제 이름은 {name}이고, 나이는 {age}입니다."
+    print(greeting)
+    ```
+
+    - [LV1 / 서울에서 김서방 찾기](./프로그래머스/1/12919. 서울에서 김서방 찾기/서울에서 김서방 찾기.py)
+
+- 함수
+
+  - upper
+
+    - 대문자로 변환
+
+      ```python
+      a = 'hi'
+      new_a = a.upper()
+      print(new_a)    # 'HI'
+      ```
+
+      - [LV2 / JadenCase 문자열 만들기](./프로그래머스/2/12951. JadenCase 문자열 만들기/JadenCase 문자열 만들기.py)
+
+  - lower
+
+    - 소문자로 변환
+
+      ```python
+      a = 'HI'
+      new_a = a.lower()
+      print(new_a)    # 'hi'
+      ```
+
+      - [LV2 / JadenCase 문자열 만들기](./프로그래머스/2/12951. JadenCase 문자열 만들기/JadenCase 문자열 만들기.py)
+
+  - isalpha
+
+    - 문자열이 알파벳으로 구성되어 있는지 확인
+
+    - 숫자나 공백이 포함되면 False 반환
+
+      ```python
+      print('ABC'.isalpha())        # True
+      print('도레미'.isalpha())     # True
+      print('A B C'.isalpha())      # False
+      print('도레미123'.isalpha())  # False
+      ```
+
+  - isdigit
+
+    - 문자열이 숫자로만 구성되어 있는지 확인
+
+      ```python
+      print('135'.isdigit())      # True
+      print('1 3 5'.isdigit())    # False
+      ```
+
+  - replace
+
+    - 문자열에서 특정 문자열을 다른 문자열로 교체
+
+      ```python
+      string.replace(old_value, new_value, count)       # count는 횟수 설정
+
+      string = "Hello, world! world!!"
+      new_string = string.replace("world", "Python")    # "Hello, Python! Python!!"
+      new_string = string.replace("world", "Python", 1)    # "Hello, Python! world!!"
+      ```
+
+      - [LV1 / 숫자 문자열과 영단어](./프로그래머스/1/81301. 숫자 문자열과 영단어/숫자 문자열과 영단어.py)
+
+      - [LV1 / 옹알이 （2）](./프로그래머스/1/133499. 옹알이 （2）/옹알이 （2）.py)
+
+  - strip
+
+    - 문자열 끝에서 특정 문자 제거
+
+      ```python
+      text.strip()            # 양쪽 공백 제거
+      text.lstrip()           # 왼쪽 공백 제거
+      text.tstrip()           # 오른쪽 공백 제거
+      text.strip('x')         # 특정 문자 제거
+      text.strip('xy')        # 여러 문자를 한 번에 제거 ('x', 'y'가 앞과 뒤에서 모두 제거)
+
+      text = "xyxxyHello, World!yyx"
+      stripped_text = text.strip('xy')
+      print(stripped_text)  # 'Hello, World!'
+      ```
+
+      - [LV1 / 옹알이 （2）](./프로그래머스/1/133499. 옹알이 （2）/옹알이 （2）.py)
+
+  - startswith / endswith
+
+    - 특정 단어로 시작하거나 끝나는지 확인
+
+      ```python
+      text.startswith('chk')    # text가 'chk'로 시작하는지 확인
+      text.endswith('chk')      # text가 'chk'로 끝나는지 확인
+      ```
+
+      - [LV2 / 전화번호 목록](./프로그래머스/2/42577. 전화번호 목록/전화번호 목록.py)
+
+</div>
+</details>
+
+<details close>
+<summary><b>라이브러리</b></summary>
+<div markdown="1">
+
+- deque
+
+  ```python
+  from collections import deque
+  d = deque()
+  d.append([0, 0])
+  i, j = d.popleft()
+  ```
+
+  - [LV2 / 게임 맵 최단거리](./프로그래머스/2/1844. 게임 맵 최단거리/게임 맵 최단거리.py)
+
+- defaultdict
+
+  ```python
+  from collections import defaultdict
+  a = defaultdict(int)
+  ```
+
+  - [LV2 / 할인 행사](./프로그래머스/2/131127. 할인 행사/할인 행사.py)
+
+- combinations / permutations
+
+  ```python
+  from itertools import combinations
+  from itertools import permutations
+
+  c = list(combinations(iterable, r))
+  p = list(permutations(iterable, r))
+  ```
+
+  - [LV2 / 피로도](./프로그래머스/2/87946. 피로도/피로도.py)
+
+- heapq
+
+  ```python
+  import heapq
+
+  min_heap = []
+  heapq.heappush(min_heap, num)
+  popped_val = heapq.heappop(min_heap)
+
+  max_heap = []
+  heapq.heappush(max_heap, -num)
+  popped_val = -heapq.heappop(max_heap)
+  ```
+
+</div>
+</details>
+
+### 알고리즘
 
 <details close>
 <summary><b>완전탐색</b></summary>
@@ -360,15 +399,6 @@
 </details>
 
 <details close>
-<summary><b>스택</b></summary>
-<div markdown="1">
-
-- [LV2 / 뒤에 있는 큰 수 찾기](./프로그래머스/2/154539. 뒤에 있는 큰 수 찾기/뒤에 있는 큰 수 찾기.py)
-
-</div>
-</details>
-<details close>
-
 <summary><b>DFS</b></summary>
 <div markdown="1">
 
@@ -425,6 +455,68 @@
 
 <details close>
 <summary><b>그래프 이론</b></summary>
+<div markdown="1">
+
+</div>
+</details>
+
+### 자료구조
+
+<details close>
+<summary><b>배열</b></summary>
+<div markdown="1">
+
+</div>
+</details>
+
+<details close>
+<summary><b>연결 리스트</b></summary>
+<div markdown="1">
+
+</div>
+</details>
+
+<details close>
+<summary><b>스택</b></summary>
+<div markdown="1">
+
+- [LV2 / 뒤에 있는 큰 수 찾기](./프로그래머스/2/154539. 뒤에 있는 큰 수 찾기/뒤에 있는 큰 수 찾기.py)
+
+</div>
+</details>
+
+<details close>
+<summary><b>큐</b></summary>
+<div markdown="1">
+
+</div>
+</details>
+
+<details close>
+<summary><b>해시 테이블</b></summary>
+<div markdown="1">
+
+</div>
+</details>
+
+<details close>
+<summary><b>트리</b></summary>
+<div markdown="1">
+
+- [LV3 / 이중우선순위큐](./프로그래머스/3/42628. 이중우선순위큐/이중우선순위큐.py)
+
+</div>
+</details>
+
+<details close>
+<summary><b>그래프</b></summary>
+<div markdown="1">
+
+</div>
+</details>
+
+<details close>
+<summary><b>트라이</b></summary>
 <div markdown="1">
 
 </div>
