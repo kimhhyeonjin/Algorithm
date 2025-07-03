@@ -360,6 +360,8 @@
   popped_val = -heapq.heappop(max_heap)
   ```
 
+  - [LV3 / 이중우선순위큐](./프로그래머스/3/42628. 이중우선순위큐/이중우선순위큐.py)
+
 </div>
 </details>
 
