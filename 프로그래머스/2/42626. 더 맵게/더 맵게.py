@@ -1,17 +1,18 @@
 from heapq import heappush, heappop
 
 def solution(scoville, K):
-    h = []
-    for i in scoville:
-        heappush(h, i)
-    
     answer = 0
-    while h[0] < K and len(h) > 1:
-        f = heappop(h)
-        s = heappop(h)
-        heappush(h, f + 2*s)
-        answer += 1
+    min_heap = []
+    for s in scoville:
+        heappush(min_heap, s)
     
-    if h[0] < K:
-        answer = -1
+    while min_heap[0] < K:
+        if len(min_heap) == 1:
+            answer = -1
+            break
+        a = heappop(min_heap)
+        b = heappop(min_heap)
+        heappush(min_heap, a + b * 2)
+        answer += 1
+        
     return answer
