@@ -361,6 +361,7 @@
 - heapq
 
   ```python
+  # 1
   import heapq
 
   min_heap = []
@@ -370,11 +371,24 @@
   max_heap = []
   heapq.heappush(max_heap, -num)
   popped_val = -heapq.heappop(max_heap)
+
+  # 2
+  from heapq import heappop, heappush
+
+  min_heap = []
+  heappush(min_heap, num)
+  popped_val = heappop(min_heap)
+
+  max_heap = []
+  heappush(max_heap, -num)
+  popped_val = -heappop(max_heap)
   ```
 
   - [LV3 / 이중우선순위큐](./프로그래머스/3/42628. 이중우선순위큐/이중우선순위큐.py)
 
   - [LV3 / 야근 지수](./프로그래머스/3/12927. 야근 지수/야근 지수.py)
+
+  - [LV2 / 더 맵게](./프로그래머스/2/42626. 더 맵게/더 맵게.py)
 
 </div>
 </details>
@@ -522,6 +536,9 @@
 - [LV3 / 이중우선순위큐](./프로그래머스/3/42628. 이중우선순위큐/이중우선순위큐.py)
 
 - [LV3 / 야근 지수](./프로그래머스/3/12927. 야근 지수/야근 지수.py)
+
+- [LV2 / 더 맵게](./프로그래머스/2/42626. 더 맵게/더 맵게.py)
+
 </div>
 </details>
 
