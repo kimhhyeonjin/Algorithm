@@ -432,6 +432,8 @@
 <summary><b>DFS</b></summary>
 <div markdown="1">
 
+- [LV2 / 타겟 넘버](./프로그래머스/2/43165. 타겟 넘버/타겟 넘버.py)
+
 </div>
 </details>
 
