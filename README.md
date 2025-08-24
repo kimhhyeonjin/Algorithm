@@ -332,37 +332,82 @@
 <summary><b>라이브러리</b></summary>
 <div markdown="1">
 
-- deque
+- collections
 
-  ```python
-  from collections import deque
-  d = deque()
-  d.append([0, 0])
-  i, j = d.popleft()
-  ```
+  - deque
 
-  - [LV2 / 게임 맵 최단거리](./프로그래머스/2/1844. 게임 맵 최단거리/게임 맵 최단거리.py)
+    ```python
+    from collections import deque
+    d = deque()
+    d.append([0, 0])
+    i, j = d.popleft()
+    ```
 
-- defaultdict
+    - [LV2 / 게임 맵 최단거리](./프로그래머스/2/1844. 게임 맵 최단거리/게임 맵 최단거리.py)
 
-  ```python
-  from collections import defaultdict
-  a = defaultdict(int)
-  ```
+  - defaultdict
 
-  - [LV2 / 할인 행사](./프로그래머스/2/131127. 할인 행사/할인 행사.py)
+    ```python
+    from collections import defaultdict
+    a = defaultdict(int)
+    ```
 
-- combinations / permutations
+    - [LV2 / 할인 행사](./프로그래머스/2/131127. 할인 행사/할인 행사.py)
 
-  ```python
-  from itertools import combinations
-  from itertools import permutations
+  - Counter
 
-  c = list(combinations(iterable, r))
-  p = list(permutations(iterable, r))
-  ```
+    ```python
+    from collections import Counter
 
-  - [LV2 / 피로도](./프로그래머스/2/87946. 피로도/피로도.py)
+    cnt_list = Counter([1, 3, 5, 3, 2, 1, 1, 7, 3, 2, 3])
+    # Counter({3: 4, 1: 3, 2: 2, 5: 1, 7: 1})
+    cnt_list_items = Counter([1, 3, 5, 3, 2, 1, 1, 7, 3, 2, 3]).items()
+    # [(1, 3), (3, 4), (5, 1), (2, 2), (7, 1)]
+    cnt_list_keys = Counter([1, 3, 5, 3, 2, 1, 1, 7, 3, 2, 3]).keys()
+    # [1, 3, 5, 2, 7]
+    cnt_list_values = Counter([1, 3, 5, 3, 2, 1, 1, 7, 3, 2, 3]).values()
+    # [3, 4, 1, 2, 1]
+    ```
+
+- itertools
+
+  - combinations
+
+    ```python
+    from itertools import combinations
+
+    c = list(combinations(iterable, r))
+    ```
+
+  - permutations
+
+    ```python
+    from itertools import permutations
+
+    per = list(permutations('cba', 2))
+    # [('c', 'b'), ('c', 'a'), ('b', 'c'), ('b', 'a'), ('a', 'c'), ('a', 'b')]
+    for p in per:
+        print(''.join(p))
+        # cb
+        # ca
+        # bc
+        # ba
+        # ac
+        # ab
+    ```
+
+    - [LV2 / 피로도](./프로그래머스/2/87946. 피로도/피로도.py)
+
+  - product
+
+    ```python
+    from itertools import product
+
+    product_list = [list(map(int, input().split()))[1:] for _ in range(K)]
+    # [[1, 2], [3, 4, 5], [6, 7]]
+    p_list = list(product(*product_list))
+    # [(1, 3, 6), (1, 3, 7), (1, 4, 6), (1, 4, 7), (1, 5, 6), (1, 5, 7), (2, 3, 6), (2, 3, 7), (2, 4, 6), (2, 4, 7), (2, 5, 6), (2, 5, 7)]
+    ```
 
 - heapq
 
